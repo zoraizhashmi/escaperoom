@@ -1,0 +1,79 @@
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0vh;
+	display: block;
+}
+
+h1 {
+	text-align: center
+}
+
+/* Use this class on the PARENT of whatever you are trying to center; remember that the PARENT tells the CHILD what to do! */
+/* NOTE: Centering content only works when the display property is "flex"! */
+.center-content {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Use this class on your image to restrict the size so it stays completely within it's parent div */
+.restrict-img-size {
+	max-height: 99%;
+	max-width: 99%;
+}
+
+.make-small {
+	max-height: 25%;
+	max-width: 25%;
+}
+
+.block {
+	display: flex;
+	height: 100%;
+	width: calc(100%/5);
+}
+
+.row {
+	height: calc(100%/3);
+	width: 100%;
+	display: flex;
+}
+
+.pinstripe {
+background: repeating-linear-gradient(
+  to right,
+  #ffffff ,
+  #015fb5 2px,
+  #ffffff 10px,
+  #015fb5 2px
+);
+}
+
+.opaque {
+	opacity: 0.25;
+}
+
+.no-cursor:hover {
+	cursor: default;
+}
+
+.button:active {
+	transform: scale(0.95, 0.95);
+}
+
+.red {
+	background-color: #bb2a1a;
+}
+
+.white {
+	background-color: #ffffff;
+}
+
+.blue {
+	background-color: #000088;
+}
+
+.gray {
+	background-color: #E8DEDF;
+}
