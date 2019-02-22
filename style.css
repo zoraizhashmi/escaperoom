@@ -28,10 +28,22 @@ h1 {
 	max-width: 25%;
 }
 
+.room {
+	display: flex;
+	height: 100%;
+	width: 75%;
+}
+
+.out {
+	display: flex;
+	height: 100%;
+	width: calc(25%/2);
+}
+
 .block {
 	display: flex;
 	height: 100%;
-	width: calc(100%/5);
+	width: calc(100%/3);
 }
 
 .row {
