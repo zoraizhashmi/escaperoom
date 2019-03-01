@@ -4,6 +4,7 @@ body {
 	margin: 0vh;
 	display: block;
 }
+}
 
 h1 {
 	text-align: center
@@ -23,15 +24,28 @@ h1 {
 	max-width: 99%;
 }
 
+.hint-size {
+	max-height: 95%;
+	max-width: 95%;
+}
+
 .make-small {
 	max-height: 50%;
 	max-width: 50%;
+}
+
+.zoom:hover {
+  transform: scale(1.05); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
 
 .room {
 	display: flex;
 	height: 100%;
 	width: 75%;
+}
+
+.opaque {
+	opacity: 0.5;
 }
 
 .out {
