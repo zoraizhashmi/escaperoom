@@ -3,33 +3,53 @@ function checkPosition(){
 	audio.play();	
 }
 
+function moveOnPartTwo(el){
+	if(el.src.match("images/bosskey.gif")){
+		window.open("part2.html", '_self');
+	}
+	else {
+		var audio = new Audio('sounds/glove.mp3');
+	audio.play();}
+}
+
+function partOnePass(){
+		if (document.getElementById('molina').classList.contains("opaque") && document.getElementById('gallo').classList.contains("opaque") && document.getElementById('freeman').classList.contains("opaque")){
+		document.getElementById('degrom').src = "images/bosskey.gif";}
+		else {
+		}
+}
+
 function rCorrect(el){
 		if (document.getElementById('ball1a').src.match("images/red/red.png") && document.getElementById('ball2a').src.match("images/red/red.png")){
-		document.getElementById('molina').classList.add("opaque");
+		el.classList.add("opaque");
 		}
 		else {
 		var audio = new Audio('sounds/glove.mp3');
 		audio.play();
 		}
+		partOnePass();
 }
 
 function pCorrect(el){
 	if (document.getElementById('ball3a').src.match("images/pinstripes/pinstripe.png") && document.getElementById('ball4a').src.match("images/pinstripes/pinstripe.png")){
-	document.getElementById('gallo').classList.add("opaque"); 
+	el.classList.add("opaque"); 
 	}
 	else{
 		var audio = new Audio('sounds/glove.mp3');
 		audio.play();
 	}
+	partOnePass();
 }
 
 function eCorrect(el){
 	if (document.getElementById('ball5a').src.match("images/even/under10.png") && document.getElementById('ball6a').src.match("images/even/under10.png")){
-	document.getElementById('freeman').classList.add("opaque");}
+	el.classList.add("opaque");
+	}
 	else {
 		var audio = new Audio('sounds/glove.mp3');
 		audio.play();
- }
+	}
+	partOnePass();
 }
 
 function sWinner(el){
