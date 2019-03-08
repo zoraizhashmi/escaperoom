@@ -3,6 +3,12 @@ function checkPosition(){
 	audio.play();	
 }
 
+function sRoomStart() {
+	 alert("Find the right one before the timer finishes!");
+	mlbTwo()	
+}
+
+
 function moveOnPartTwo(el){
 	if(el.src.match("images/bosskey.gif")){
 		window.open("part2.html", '_self');
@@ -58,7 +64,8 @@ function sWinner(el){
 		var audio = new Audio('sounds/winner.wav');
 		audio.play();
 	}
-	else if (document.getElementById('pujols').src.match("images/bosskey.gif")){
+	else if (el.src.match("images/bosskey.gif")){
+	window.open("congrats.html", '_self');
 	}
 	else {
 		var audio = new Audio('sounds/glove.mp3');
@@ -73,6 +80,10 @@ function redHintReveal(el){
 	if (document.getElementById('ball1a').src.match("images/blank.png") && document.getElementById('ball2a').src.match("images/blank.png")){
 		document.getElementById('ball1a').src = "images/red/red.png"
 		document.getElementById('ball2a').src = "images/red/red.png"
+		document.getElementById('ball1a').classList.remove("hint-size");
+		document.getElementById('ball1a').classList.add("make-small");
+		document.getElementById('ball2a').classList.remove("hint-size");
+		document.getElementById('ball2a').classList.add("make-small");
 		var audio = new Audio('sounds/batcrack.wav');
 	audio.play();
 	} 
@@ -87,6 +98,10 @@ function pinstripleHintReveal(el){
 	if (document.getElementById('ball3a').src.match("images/blank.png") && document.getElementById('ball4a').src.match("images/blank.png")){
 		document.getElementById('ball3a').src = "images/pinstripes/pinstripe.png"
 		document.getElementById('ball4a').src = "images/pinstripes/pinstripe.png"
+		document.getElementById('ball3a').classList.remove("hint-size");
+		document.getElementById('ball3a').classList.add("make-small");
+		document.getElementById('ball4a').classList.remove("hint-size");
+		document.getElementById('ball4a').classList.add("make-small");
 		var audio = new Audio('sounds/batcrack.wav');
 	audio.play();
 	} 
@@ -101,6 +116,10 @@ function pinstripleHintReveal(el){
 	if (document.getElementById('ball5a').src.match("images/blank.png") && document.getElementById('ball6a').src.match("images/blank.png")){
 		document.getElementById('ball5a').src = "images/even/under10.png"
 		document.getElementById('ball6a').src = "images/even/under10.png"
+		document.getElementById('ball5a').classList.remove("hint-size");
+		document.getElementById('ball5a').classList.add("make-small");
+		document.getElementById('ball6a').classList.remove("hint-size");
+		document.getElementById('ball6a').classList.add("make-small");
 		var audio = new Audio('sounds/batcrack.wav');
 	audio.play();
 	}
@@ -127,4 +146,25 @@ function sHintReveal(el){
 	}
 }
 
+function startTimer(duration, display) {
+    var timer = duration, minutes, seconds;
+    setInterval(function () {
+        minutes = parseInt(timer / 60, 10)
+        seconds = parseInt(timer % 60, 10);
 
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent = minutes + ":" + seconds;
+
+        if (--timer < 0) {
+            timer = duration;
+        }
+    }, 1000);
+}
+
+window.onload = function () {
+    var fiveMinutes = 60 * 5,
+        display = document.querySelector('#time');
+    startTimer(fiveMinutes, display);
+};

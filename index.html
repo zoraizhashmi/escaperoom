@@ -8,35 +8,35 @@
 	</head>
 
 	<body>
-		<embed src="sounds/mlbstart.wav" width="180" height="90" loop="false" autostart="true" hidden="true" />
+		<embed src="sounds/mlbstart.wav" id="mlbstart" width="180" height="90" loop="false" autostart="true" hidden="true" />
 			<!-- FIRST SLOT -->
 			<div class="row red center-content">
 				<div class="out gray center-content">
-					<img src="images/baseball.png" class="button make-small" id="ball1a" onclick="redHintReveal(this)"/>
+					<img src="images/mlb.png" class="zoom button hint-size" id="ball1a" onclick="redHintReveal(this)"/>
 				</div>
 				<div class="room">
 					<div class="block center-content">
-						<img src="images/red/trout.png" class="button restrict-img-size" onclick="checkPosition()"/>
+						<img src="images/red/trout.png" class="button restrict-img-size" onclick="checkPosition(this)"/>
 					</div>
 					<div class="block center-content">
 						<img src="images/red/molina.png" class="button restrict-img-size" id="molina" onclick="rCorrect(this)"/>
 					</div>
 					<div class="block center-content">
-						<img src="images/red/votto.png" class="button restrict-img-size" onclick="checkPosition()"/>
+						<img src="images/red/votto.png" class="button restrict-img-size" onclick="checkPosition(this)"/>
 					</div>
 				</div>
 				<div class="out gray center-content">
-					<img src="images/baseball.png" class="button make-small" id="ball2a" onclick="redHintReveal(this)"/>
+					<img src="images/mlb.png" class="zoom button hint-size" id="ball2a" onclick="redHintReveal(this)"/>
 				</div>
 			</div>
 			<!-- SECOND SLOT -->
 			<div class="row pinstripe center-content">
 				<div class="out gray center-content">
-					<img src="images/baseball.png" class="button make-small" id="ball3a" onclick="pinstripleHintReveal(this)"/>
+					<img src="images/mlb.png" class="zoom button hint-size" id="ball3a" onclick="pinstripleHintReveal(this)"/>
 				</div>
 				<div class="room">
 					<div class="block center-content">
-						<img src="images/pinstripes/bryant.png" class="button restrict-img-size" onclick="checkPosition()"/>
+						<img src="images/pinstripes/bryant.png" class="button restrict-img-size" onclick="checkPosition(this)"/>
 					</div>
 					<div class="block center-content">
 						<img src="images/pinstripes/degrom.png" class="button restrict-img-size" id="degrom" onclick="moveOnPartTwo(this)"/>
@@ -46,27 +46,27 @@
 					</div>
 				</div>
 				<div class="out gray center-content">
-					<img src="images/baseball.png" class="button make-small" id="ball4a" onclick="pinstripleHintReveal(this)"/>
+					<img src="images/mlb.png" class="zoom button hint-size" id="ball4a" onclick="pinstripleHintReveal(this)"/>
 				</div>
 			</div>
 			<!-- THIRD SLOT -->
 			<div class="row blue center-content">
 				<div class="out gray center-content">
-					<img src="images/baseball.png" class="button make-small" id="ball5a" onclick="digitHintReveal(this)"/>
+					<img src="images/mlb.png" class="zoom button hint-size" id="ball5a" onclick="digitHintReveal(this)"/>
 				</div>
 				<div class="room">
 					<div class="block center-content">
 						<img src="images/even/freeman.png" class="button restrict-img-size" id="freeman" onclick="eCorrect(this)"/>
 					</div>
 					<div class="block center-content">
-						<img src="images/even/posey.png" class="button restrict-img-size" onclick="checkPosition()"/>
+						<img src="images/even/posey.png" class="button restrict-img-size" onclick="checkPosition(this)"/>
 					</div>
 					<div class="block center-content">
-						<img src="images/even/sale.png" class="button restrict-img-size" onclick="checkPosition()"/>
+						<img src="images/even/sale.png" class="button restrict-img-size" onclick="checkPosition(this)"/>
 					</div>
 				</div>
 				<div class="out gray center-content">
-					<img src="images/baseball.png" class="button make-small" id="ball6a" onclick="digitHintReveal(this)"/>
+					<img src="images/mlb.png" class="zoom button hint-size" id="ball6a" onclick="digitHintReveal(this)"/>
 				</div>
 			</div>
 		</div>		

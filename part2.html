@@ -7,14 +7,18 @@
 		<link rel="stylesheet" href="style.css" />
 	</head>
 
-	<body>
-		<embed src="sounds/charge.wav" width="180" height="90" loop="false" autostart="true" hidden="true" />
+	<body onload="sRoomStart()">
+			<embed src="sounds/charge.wav" id="mlbstart" width="180" height="90" loop="false" autostart="true" hidden="true" />
 			<!-- FIRST SLOT -->
-			<div class="row gray center-content">
+			<div class="countdown center-content">
+				<div class="timer-text"><span id="time">1:00</span> left!</div>
+				</div>
+			</div>
+			<div class="s-row gray center-content">
 				<div class="out center-content">
 					<img src="images/baseball.png" class="button make-small" id="ball1b" onclick=""/>
 				</div>
-					<div class="room">
+				<div class="room">
 					<div class="red block center-content">
 						<img src="images/s/smith.png" class="button restrict-img-size" onclick="checkPosition()"/>
 					</div>
@@ -28,9 +32,10 @@
 				<div class="out gray center-content">
 					<img src="images/baseball.png" class="button make-small" id="ball2b" onclick=""/>
 				</div>
+				</div>
 			</div>
 			<!-- SECOND SLOT -->
-			<div class="row center-content">
+			<div class="s-row center-content">
 				<div class="out gray center-content">
 					<img src="images/mlb.png" class="zoom button hint-size" id="mlb1" onclick="sHintReveal(this)"/>
 				</div>
@@ -50,7 +55,7 @@
 				</div>
 			</div>
 			<!-- THIRD SLOT -->
-			<div class="row center-content">
+			<div class="s-row center-content">
 				<div class="out gray center-content">
 					<img src="images/baseball.png" class="button make-small" id="ball3b" onclick=""/>
 				</div>
