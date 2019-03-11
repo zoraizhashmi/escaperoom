@@ -4,7 +4,7 @@ function checkPosition(){
 }
 
 function sRoomStart() {
-	 alert("Find the right one before the timer finishes!");
+	 alert("But wait... there's more!");
 	mlbTwo()	
 }
 
@@ -20,6 +20,8 @@ function moveOnPartTwo(el){
 
 function partOnePass(){
 		if (document.getElementById('molina').classList.contains("opaque") && document.getElementById('gallo').classList.contains("opaque") && document.getElementById('freeman').classList.contains("opaque")){
+		var audio = new Audio('sounds/winner.wav');
+		audio.play();
 		document.getElementById('degrom').src = "images/bosskey.gif";}
 		else {
 		}
@@ -60,7 +62,7 @@ function eCorrect(el){
 
 function sWinner(el){
 	if (document.getElementById('mlb1').src.match("images/blank.png") && document.getElementById('mlb2').src.match("images/blank.png")){
-		document.getElementById('pujols').src = "images/bosskey.gif"
+	window.open("congrats.html", '_self');
 		var audio = new Audio('sounds/winner.wav');
 		audio.play();
 	}
@@ -146,7 +148,20 @@ function sHintReveal(el){
 	}
 }
 
-function startTimer(duration, display) {
+
+
+var timeleft = 45;
+var downloadTimer = setInterval(function(){
+  document.getElementById("countdown").innerHTML = timeleft;
+  timeleft -= 1;
+  if(timeleft <= 0){
+    clearInterval(downloadTimer);
+	window.open("part1.html", '_self');
+	}
+}, 1000);
+
+	
+/*function startTimer(duration, display) {
     var timer = duration, minutes, seconds;
     setInterval(function () {
         minutes = parseInt(timer / 60, 10)
@@ -158,13 +173,14 @@ function startTimer(duration, display) {
         display.textContent = minutes + ":" + seconds;
 
         if (--timer < 0) {
-            timer = duration;
+           window.history.back();
         }
     }, 1000);
 }
 
 window.onload = function () {
-    var fiveMinutes = 60 * 5,
+    var oneMinute = 60 * 1,
         display = document.querySelector('#time');
-    startTimer(fiveMinutes, display);
+    startTimer(oneMinute, display);
 };
+*/

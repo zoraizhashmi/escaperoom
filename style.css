@@ -10,6 +10,7 @@ body {
 
 h1 {
 	text-align: center
+	font-family:
 }
 
 /* Use this class on the PARENT of whatever you are trying to center; remember that the PARENT tells the CHILD what to do! */
